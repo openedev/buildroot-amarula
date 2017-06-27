@@ -66,4 +66,17 @@ To boot your newly created system:
 - close JM3 for sd boot.
 - power on the board.
 
+Testing graphics on i.CoreM6 Starter Kit:
+========================================
+
+Running kmscube
+# kmscube -D /dev/dri/card1
+
+Running glmark2-es2-drm
+# glmark2-es2-drm
+
+Running Qt5 Cinematic Demo:
+# export QT_QPA_EGLFS_KMS_CONFIG=/root/icorem6.json
+# CinematicExperience-demo
+
 Enjoy!

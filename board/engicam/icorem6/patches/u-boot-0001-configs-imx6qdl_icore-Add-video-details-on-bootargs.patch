@@ -1,0 +1,32 @@
+From 873ac676c5125173b8a32fb8814e6b9b09bf21d8 Mon Sep 17 00:00:00 2001
+From: Jagan Teki <jagan@amarulasolutions.com>
+Date: Tue, 27 Jun 2017 15:29:01 +0530
+Subject: [PATCH] configs: imx6qdl_icore: Add video details on bootargs
+
+Signed-off-by: Jagan Teki <jagan@amarulasolutions.com>
+---
+ include/configs/imx6qdl_icore.h | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/include/configs/imx6qdl_icore.h b/include/configs/imx6qdl_icore.h
+index 13fc48f..f0fe666 100644
+--- a/include/configs/imx6qdl_icore.h
++++ b/include/configs/imx6qdl_icore.h
+@@ -45,10 +45,13 @@
+ 	"fdt_addr=0x18000000\0" \
+ 	"boot_fdt=try\0" \
+ 	"mmcpart=1\0" \
++	"panel_type=LVDS-1\0" \
++	"resolution=800x480\0" \
++	"sync=60\0" \
+ 	"nandroot=ubi0:rootfs rootfstype=ubifs\0" \
+ 	"mmcautodetect=yes\0" \
+ 	"mmcargs=setenv bootargs console=${console},${baudrate} " \
+-		"root=${mmcroot}\0" \
++		"root=${mmcroot} video=${panel_type}:${resolution}@${sync}\0" \
+ 	"ubiargs=setenv bootargs console=${console},${baudrate} " \
+ 		"ubi.mtd=5 root=${nandroot} ${mtdparts}\0" \
+ 	"loadbootscript=" \
+-- 
+2.7.4
+

@@ -1,0 +1,40 @@
+From e692662c789581295c1e7c7e92a2ceb1e212e6d2 Mon Sep 17 00:00:00 2001
+From: Jagan Teki <jagan@amarulasolutions.com>
+Date: Tue, 7 Mar 2017 07:08:57 +0000
+Subject: [PATCH] arm: dts: imx6q-icore: Add touchscreen node
+
+max11801 touchscreen on Engicam iCoreM6 Quad module is
+connected via i2c1, so add tc: max11801@48 on i2c1.
+
+Cc: Domenico Acri <domenico.acri@engicam.com>
+Cc: Matteo Lisi <matteo.lisi@engicam.com>
+Cc: Michael Trimarchi <michael@amarulasolutions.com>
+Cc: Shawn Guo <shawnguo@kernel.org>
+Signed-off-by: Jagan Teki <jagan@amarulasolutions.com>
+---
+ arch/arm/boot/dts/imx6q-icore.dts | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/arch/arm/boot/dts/imx6q-icore.dts b/arch/arm/boot/dts/imx6q-icore.dts
+index 41d5a31..c190e5c 100644
+--- a/arch/arm/boot/dts/imx6q-icore.dts
++++ b/arch/arm/boot/dts/imx6q-icore.dts
+@@ -58,6 +58,15 @@
+ 	status = "okay";
+ };
+ 
++&i2c1 {
++	ts: max11801@48 {
++		compatible = "max11801";
++		reg = <0x48>;
++		interrupt-parent = <&gpio3>;
++		interrupts = <31 2>;
++	};
++};
++
+ &ldb {
+ 	status = "okay";
+ 
+-- 
+1.9.1
+
