@@ -90,4 +90,18 @@ Running Qt5 Cinematic Demo:
 # export QT_QPA_EGLFS_KMS_CONFIG=/root/imx6qdl-icore-ofcap12.json
 # CinematicExperience-demo
 
+Testing VPU on i.CoreM6:
+=======================
+
+Find connector id using modetest
+# modetest -c
+
+Download video file and copy /mnt
+# wget http://media.xiph.org/mango/tears_of_steel_1080p.webm -P /mnt/
+# gst-launch-1.0 uridecodebin uri=file:///mnt/tears_of_steel_1080p.webm ! \
+> videoscale ! \
+> videoconvert ! \
+> video/x-raw,width=1280,height=800,pixel-aspect-ratio=1/1 ! \
+> kmssink connector-id=38 driver-name="imx-drm"  sync=false
+
 Enjoy!
