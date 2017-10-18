@@ -8,15 +8,24 @@ it will bring-up the board, and allow access through the serial console.
 Pine64 link:
 https://www.pine64.org/?page_id=1194
 
-Wiki link:
+SoPINE link:
+https://www.pine64.org/?page_id=1491
+
+Pine64 Wiki link:
 https://confluence.amarulasolutions.com/display/ODWIKI/Pine64
+
+SoPINE Wiki link:
+https://confluence.amarulasolutions.com/display/ODWIKI/Pine64+SoPine
 
 This configuration uses U-Boot mainline and kernel mainline.
 
 How to build
 ============
 
-    $ make pine64_defconfig
+    $ make pine64_defconfig (to configure pine64)
+
+    $ make pine64_sopine_defconfig (to configure sopine)
+
     $ make
 
 Note: you will need access to the internet to download the required
