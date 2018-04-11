@@ -835,6 +835,7 @@ N:	Jagan Teki <jagan@amarulasolutions.com>
 F:	board/amarula/
 F:	board/asus/
 F:	board/bananapi/
+F:	board/bticino/
 F:	board/engicam/
 F:	configs/amarula_vyasa_rk3288_defconfig
 F:	configs/asus_tinker_rk3288_defconfig
@@ -848,6 +849,7 @@ F:	board/orangepi/orangepi-zero-plus2/
 F:	board/pine64/
 F:	configs/bananapi_m1_defconfig
 F:	configs/bananapi_m64_defconfig
+F:	configs/bticino_imx6dl_mamoj_qt5_defconfig
 F:	configs/friendlyarm_nanopi_a64_defconfig
 F:	configs/friendlyarm_nanopi_neo2_defconfig
 F:	configs/olimex_a64_olinuxino_defconfig
