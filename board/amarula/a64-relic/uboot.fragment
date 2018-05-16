@@ -1,0 +1,3 @@
+# A64-Relic need few user-defined configs enable on top of
+# uboot mainline default defconfig
+CONFIG_CMD_USB_MASS_STORAGE=y
