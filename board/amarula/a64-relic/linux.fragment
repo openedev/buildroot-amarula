@@ -1,3 +1,4 @@
 # A64-Relic need few user-defined configs enable on top of
 # linux mainline default defconfig
 CONFIG_USB_MASS_STORAGE=y
+# CONFIG_DRM_RCAR_DU is not set
